@@ -1,6 +1,7 @@
-import { useColors } from "@/contexts/colorsContext";
-import { Button, ButtonVariant } from "../button";
+import { useModal } from "@/contexts/modalContext";
 import { ShareNetwork } from "phosphor-react";
+
+import { Button, ButtonVariant } from "../button";
 import { ProfilePicture } from "../profile-picture/ProfilePicture";
 
 import styles from "./header.module.scss";
@@ -10,15 +11,17 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = () => {
-  const { onChangeColors, colors } = useColors();
-  console.log("colors", colors);
+  const { openModal } = useModal();
+
+  const onOpenModal = () =>
+    openModal({ title: "toto", contentElement: <div>zeifjezoifj</div> });
 
   return (
     <div className={styles.Header}>
       <ProfilePicture />
       <Button
         variant={ButtonVariant.Secondary}
-        onClick={onChangeColors}
+        onClick={onOpenModal}
         text="Click"
         icon={<ShareNetwork size={24} />}
       />

@@ -1,0 +1,24 @@
+
+@mixin animationSlideInFromBottom($duration) {
+  @keyframes slideInFromBottom {
+      0% {
+          margin-bottom: -100%;
+          opacity: 0;
+      }
+      100% {
+          margin-bottom: 0;
+          opacity: 1;
+      }
+  }
+  animation: slideInFromBottom #{$duration}ms;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+

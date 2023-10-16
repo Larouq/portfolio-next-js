@@ -1,5 +1,4 @@
-@import "../styles/colors.scss";
-
 .app_container {
-    @include colors();
+    min-height: 100vh;
+    background: linear-gradient(#0d081b, #170117);
 }

@@ -1,0 +1,33 @@
+@import "../../styles/animations.scss";
+
+.modal-blur-container {
+    animation: fadeIn 0.5s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--modal-overlay);
+    z-index: 1000000;
+    @media screen and (min-width: 992px) {
+        bottom: 0;
+    }
+}
+
+.modal-container {
+    position: fixed;
+    animation: fadeIn 0.5s;
+    top: var(--header-height);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    max-width: 1300px;
+    max-height: 80%;
+    border-radius: 4px;
+    background-color: var(--elevated-base);
+    z-index: 1000001;
+   
+}
