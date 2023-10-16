@@ -31,5 +31,14 @@
     background-color: var(--elevated-base);
     padding: 24px;
     z-index: 1000001;
+
+    .modal-header-title {
+        border-bottom: 1px solid var(--error);
+        padding-bottom: 10px;
+    }
+
+    .modal-content {
+        margin-top: 12px;
+    }
    
 }
