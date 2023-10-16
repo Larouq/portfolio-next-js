@@ -17,17 +17,19 @@
 .modal-container {
     position: fixed;
     animation: fadeIn 0.5s;
-    top: var(--header-height);
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
     height: fit-content;
     width: fit-content;
-    max-width: 1300px;
-    max-height: 80%;
+    border: 1px solid var(--error);
+    min-width: 800px;
+    min-height: 400px;
     border-radius: 4px;
     background-color: var(--elevated-base);
+    padding: 24px;
     z-index: 1000001;
    
 }

@@ -41,7 +41,7 @@ export const Modal = () => {
             onClick={closeModal}
           />
           <div className={styles["modal-container"]}>
-            <h5 className={styles["modal-header-title"]}>{title}</h5>
+            <h2 className={styles["modal-header-title"]}>{title}</h2>
             <div className={styles["modal-content"]}>{contentElement}</div>
           </div>
         </>,
