@@ -2,7 +2,7 @@ import styles from "./app.module.scss";
 import { ColorsProvider } from "@/contexts/colorsContext";
 import { ModalProvider } from "@/contexts/modalContext";
 
-import { Header } from "@/components/Header";
+import { Header } from "@/components/header";
 
 export default function Home() {
   return (

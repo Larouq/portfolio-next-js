@@ -1,0 +1,10 @@
+.profile_picture {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 80px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding-left: 24px;
+}
