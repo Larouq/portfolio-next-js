@@ -1,0 +1,28 @@
+@mixin colors() {
+    --pure-black: #010101;
+    --background: #121212;
+    --elevated-base: #242424;
+    --modal-overlay: #00000080;
+
+    --primary: #ffafaf;
+    --primary-pale: #ffeeee;
+    --secondary: #c9ffbf;
+    --secondary-pale: #ddefbb;
+    --tertiary: #f1db8b;
+    --primary-button: #0d0d0d;
+
+    --success: #1f9b09;
+    --error: #fa5151;
+    --warning: #f3ca39;
+
+    /* Grayscale */
+    --dark: #0d0d0d; // 900
+    --darkgrey: #282828; // 800
+    --ghostgrey: #383838; // 700
+    --stronggrey: #494949; // 600
+    --midgrey: #828282; // 500
+    --lightgrey: #b3b3b3; // 400
+    --faintgrey: #c9c9c9; // 300
+    --midlight: #eaeaea; // 200
+    --light: #fafafa; // 100
+}

@@ -1,6 +1,6 @@
 .Button {
     color: #fff;
-    background-color: #3fd48b;
+    background-color: var(--success);
     margin-right: 10px;
     height: 36px;
     min-width: 90px;
@@ -19,4 +19,12 @@
     border-radius: 14px;
     border: none;
     cursor: pointer;
+}
+
+.button-secondary {
+    background-color: var(--error);
+}
+
+.button-third {
+    background-color: var(--warning);
 }

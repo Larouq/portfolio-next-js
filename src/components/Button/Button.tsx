@@ -13,11 +13,7 @@ interface ButtonProps {
   variant: ButtonVariant;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  text,
-  onClick,
-  variant = ButtonVariant.Primary,
-}) => {
+export const Button: React.FC<ButtonProps> = ({ text, onClick, variant }) => {
   const buttonClassNames = classNames(styles.Button, {
     [styles[`button-${variant}`]]: variant,
   });
