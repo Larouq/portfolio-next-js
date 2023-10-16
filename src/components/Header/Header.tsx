@@ -1,5 +1,7 @@
 import { useColors } from "@/contexts/colorsContext";
 import { Button, ButtonVariant } from "../Button";
+import { ShareNetwork } from "phosphor-react";
+
 import styles from "./header.module.scss";
 
 interface HeaderProps {
@@ -17,6 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ title = "Tailor" }) => {
         variant={ButtonVariant.Primary}
         onClick={onChangeColors}
         text="Click"
+        icon={<ShareNetwork size={24} />}
       />
     </div>
   );

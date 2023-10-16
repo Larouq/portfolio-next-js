@@ -1,20 +1,17 @@
 .Button {
     color: #fff;
     background-color: var(--success);
-    margin-right: 10px;
     height: 36px;
     min-width: 90px;
-    font-size: 14px;
     font-family: Open Sans,Arial;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    gap: 4px;
     justify-content: center;
     text-decoration: none;
-    padding: 0;
-    outline: none;
     user-select: none;
     border-radius: 14px;
     border: none;
