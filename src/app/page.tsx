@@ -1,14 +1,14 @@
-'use client';
-import { ClickCountProvider } from '@/contexts/colorsContext';
+"use client";
+import { ClickCountProvider } from "@/contexts/colorsContext";
 
-import { Header } from '@/components/Header'
+import { Header } from "@/components/Header";
 
 export default function Home() {
   return (
-    <main >
+    <main>
       <ClickCountProvider>
         <Header />
       </ClickCountProvider>
     </main>
-  )
+  );
 }
