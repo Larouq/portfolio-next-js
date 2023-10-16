@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = () => {
     <div className={styles.Header}>
       <ProfilePicture />
       <Button
-        variant={ButtonVariant.Primary}
+        variant={ButtonVariant.Secondary}
         onClick={onChangeColors}
         text="Click"
         icon={<ShareNetwork size={24} />}

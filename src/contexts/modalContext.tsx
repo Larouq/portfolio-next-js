@@ -7,16 +7,22 @@ import React, {
   useMemo,
 } from "react";
 
+interface ModalPropsType {
+  title: string;
+  contentElement: ReactNode;
+}
+
 interface ModalContextType {
   title: string;
   contentElement: ReactNode;
-  onClose: () => void | boolean; // The onClose function can return void or boolean
+  modalOpened: boolean;
+  openModal: (value: ModalPropsType) => void;
+  closeModal: () => void;
 }
 
-const initialState: ModalContextType = {
+const initialState: ModalPropsType = {
   title: "",
-  contentElement: <></>,
-  onClose: () => false,
+  contentElement: null,
 };
 
 interface ModalProviderProps {
@@ -36,31 +42,24 @@ export const useModal = () => {
 export const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
   const [modalProps, setModalProps] = useState(initialState);
 
-  const openModal = useCallback(
-    ({ title, contentElement, onClose }: ModalContextType) => {
-      setModalProps({
-        title,
-        contentElement,
-        onClose: onClose || initialState.onClose,
-      });
-    },
-    []
-  );
+  const openModal = useCallback(({ title, contentElement }: ModalPropsType) => {
+    setModalProps({
+      title,
+      contentElement,
+    });
+  }, []);
 
   const closeModal = useCallback(() => {
-    if (modalProps.onClose) modalProps.onClose();
     setModalProps(initialState);
-  }, [modalProps]);
+  }, []);
 
   const value = useMemo(
     () => ({
       title: modalProps.title,
       contentElement: modalProps.contentElement,
-      onClose: modalProps.onClose,
-      modalOpened: modalProps.contentElement !== <></>,
+      modalOpened: modalProps.contentElement !== null,
       openModal,
       closeModal,
-      modalProps,
     }),
     [modalProps, openModal, closeModal]
   );

@@ -9,7 +9,7 @@ export const ProfilePicture = () => {
 
   return (
     <div className={styles.profile_picture} onClick={onChangeColors}>
-      <Image alt="pfp" src={pfp} width={200} />
+      <Image alt="pfp" src={pfp} width={160} />
     </div>
   );
 };
