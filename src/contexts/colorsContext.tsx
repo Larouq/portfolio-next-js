@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react';
 import React, { createContext, useContext, useState } from 'react';
 import { ColorsTypes } from '@/types/types';
+import { generateRandomColors } from '@/utils/randomGeneration';
+import { colors as colorlist } from '@/utils/colors';
+
 
 const initialColors: ColorsTypes = {
   primaryColor: '#b6d7a8',
@@ -9,7 +12,7 @@ const initialColors: ColorsTypes = {
 
 interface ColorsContextType {
   colors: ColorsTypes;
-  onChangeColors: (value: ColorsTypes) => void;
+  onChangeColors: () => void;
 }
 
 interface ColorsProviderProps {
@@ -30,8 +33,8 @@ export const useColors = () => {
 export const ClickCountProvider: React.FC<ColorsProviderProps> = ({ children }) => {
   const [colors, setColors] = useState(initialColors);
 
-  const onChangeColors = (value: ColorsTypes) => {
-    setColors(value);
+  const onChangeColors = () => {
+    setColors(generateRandomColors(colorlist));
   };
 
   return (
