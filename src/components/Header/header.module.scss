@@ -1,0 +1,41 @@
+.Header {
+    z-index: 400;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 23%);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 68px;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.Header_title {
+    color: black;
+    margin-left: 30px;
+    font-size: 28px;
+}
+  
+.Header_button {
+    color: #fff;
+    background-color: #3fd48b;
+    margin-right: 10px;
+    height: 36px;
+    min-width: 90px;
+    font-size: 14px;
+    font-family: Open Sans,Arial;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0;
+    outline: none;
+    user-select: none;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+}
