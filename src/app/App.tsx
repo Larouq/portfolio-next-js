@@ -1,6 +1,7 @@
 import { ColorsProvider } from "@/contexts/colorsContext";
 import { ModalProvider } from "@/contexts/modalContext";
 
+import { GlowingDots } from "@/components/glowing-dots";
 import { Header } from "@/components/header";
 import { Modal } from "@/components/modal";
 
@@ -11,10 +12,12 @@ export default function Home() {
     <main>
       <ModalProvider>
         <ColorsProvider>
-          <div className={styles.app_container}>
-            <Header />
-            <Modal />
-          </div>
+          <GlowingDots>
+            <div className={styles.app_container}>
+              <Header />
+              <Modal />
+            </div>
+          </GlowingDots>
         </ColorsProvider>
       </ModalProvider>
     </main>

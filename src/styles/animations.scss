@@ -13,6 +13,19 @@
   animation: slideInFromBottom #{$duration}ms;
 }
 
+@mixin animationGlowingDots() {
+    @keyframes glowingDots {
+        0% {
+            bottom: 0;
+        }
+        100% {
+            bottom: 100%;
+        }
+    }
+    animation: glowingDots infinite alternate;
+}
+  
+
 @keyframes fadeIn {
   0% {
       opacity: 0;
