@@ -31,7 +31,7 @@ export const GlowingDots: React.FC<GlowingDotsProps> = ({ children }) => {
   const [clientSideStyles, setClientSideStyles] = useState<DotStyle[]>([]);
 
   useEffect(() => {
-    const dotStyles = DOTS.map((_, i) => ({
+    const dotStyles = DOTS.map((_) => ({
       animationDelay: `${getRandomNumber(1, 2)}s`,
       animationDuration: `${getRandomNumber(7, 12)}s`,
       left: `${getRandomNumber(0, 100)}%`,

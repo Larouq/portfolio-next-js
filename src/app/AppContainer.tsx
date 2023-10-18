@@ -1,7 +1,12 @@
+"use client";
+
 import { Header } from "@/components/header";
+import { ColorsProvider } from "@/contexts/colorsContext";
+import { ModalProvider } from "@/contexts/modalContext";
+import { GlowingDots } from "@/components/glowing-dots";
 import { Modal } from "@/components/modal";
 
-import styles from "./app.module.scss";
+import "./globals.scss";
 
 export default function AppContainer({
   children,
@@ -9,10 +14,14 @@ export default function AppContainer({
   children: React.ReactNode;
 }) {
   return (
-    <div className={styles.app_container}>
-      <Header />
-      <Modal />
-      {children}
-    </div>
+    <ModalProvider>
+      <ColorsProvider>
+        <GlowingDots>
+          <Header />
+          <Modal />
+          {children}
+        </GlowingDots>
+      </ColorsProvider>
+    </ModalProvider>
   );
 }
