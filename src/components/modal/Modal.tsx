@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo } from "react";
 import ReactDOM from "react-dom";
 import { useModal } from "@/contexts/modalContext";
+import { X } from "phosphor-react";
 
 import styles from "./modal.module.scss";
 
@@ -17,18 +18,18 @@ export const Modal = () => {
     }
   }, [modalOpened, moutingPoint]);
 
-  const onCloseModal = (e: KeyboardEvent) => {
-    if (e.key === "Escape") {
-      return closeModal();
-    }
-  };
-
   useEffect(() => {
-    document.addEventListener("keydown", onCloseModal);
-    return () => {
-      document.removeEventListener("keydown", onCloseModal);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [closeModal]);
 
   if (!modalOpened) return null;
 
@@ -41,7 +42,10 @@ export const Modal = () => {
             onClick={closeModal}
           />
           <div className={styles["modal-container"]}>
-            <h2 className={styles["modal-header-title"]}>{title}</h2>
+            <div className={styles["modal-header"]}>
+              <h2>{title}</h2>
+              <X size={24} onClick={closeModal} />
+            </div>
             <div className={styles["modal-content"]}>{contentElement}</div>
           </div>
         </>,

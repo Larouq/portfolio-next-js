@@ -32,8 +32,12 @@
     padding: 24px;
     z-index: 1000001;
 
-    .modal-header-title {
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         border-bottom: 1px solid var(--error);
+        width: 100%;
         padding-bottom: 10px;
     }
 

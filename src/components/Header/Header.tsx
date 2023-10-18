@@ -14,7 +14,7 @@ export const Header: React.FC<HeaderProps> = () => {
   const { openModal } = useModal();
 
   const onOpenModal = () =>
-    openModal({ title: "Toto", contentElement: <div>zeifjezoifj</div> });
+    openModal({ title: "Links", contentElement: <div>zeifjezoifj</div> });
 
   return (
     <div className={styles.Header}>
