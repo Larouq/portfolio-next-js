@@ -21,8 +21,8 @@ const socialLinks: SocialLinks = [
 export const SocialLinksModal = () => {
   return (
     <div className={styles.links_container}>
-      {socialLinks.map(({ id, icon, label, link }) => (
-        <div key={id}>
+      {socialLinks.map(({ icon, label, link }, i) => (
+        <div key={i}>
           <a
             href={link}
             rel="noreferrer"

@@ -4,7 +4,7 @@ import { getRandomNumber } from "@/utils/randomGeneration";
 
 import styles from "./glowingDots.module.scss";
 
-const DOT_NUMBER = getRandomNumber(50, 80);
+const DOT_NUMBER = 80;
 const DOTS = [...new Array(DOT_NUMBER)];
 
 interface GlowingDotsProps {
@@ -24,7 +24,7 @@ export const GlowingDots: React.FC<GlowingDotsProps> = ({ children }) => {
             key={i}
             className={styles.glowing_dot}
             style={{
-              animationDelay: `${getRandomNumber(0, 1)}s`,
+              animationDelay: `${getRandomNumber(1, 2)}s`,
               animationDuration: `${getRandomNumber(7, 12)}s`,
               left: `${getRandomNumber(0, 100)}%`,
               width: getRandomNumber(3, 15),

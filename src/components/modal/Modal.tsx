@@ -8,15 +8,20 @@ import styles from "./modal.module.scss";
 export const Modal = () => {
   const { modalOpened, closeModal, title, contentElement } = useModal();
 
-  const moutingPoint = useMemo(() => document.createElement("div"), []);
+  const mountingPoint: HTMLElement | null = useMemo(() => {
+    if (typeof document !== "undefined") {
+      return document.createElement("div");
+    }
+    return null;
+  }, []);
 
   useLayoutEffect(() => {
-    if (!modalOpened) return () => {};
+    if (!modalOpened || !mountingPoint) return () => {};
     if (modalOpened) {
-      document.body.appendChild(moutingPoint);
-      return () => document.body.removeChild(moutingPoint);
+      document.body.appendChild(mountingPoint);
+      return () => document.body.removeChild(mountingPoint);
     }
-  }, [modalOpened, moutingPoint]);
+  }, [modalOpened, mountingPoint]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -31,7 +36,7 @@ export const Modal = () => {
     };
   }, [closeModal]);
 
-  if (!modalOpened) return null;
+  if (!modalOpened || !mountingPoint) return null;
 
   return (
     <>
@@ -53,7 +58,7 @@ export const Modal = () => {
             <div className={styles["modal-content"]}>{contentElement}</div>
           </div>
         </>,
-        moutingPoint
+        mountingPoint
       )}
     </>
   );

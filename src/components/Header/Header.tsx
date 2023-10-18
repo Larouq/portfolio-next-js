@@ -15,8 +15,10 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = () => {
   const { openModal } = useModal();
 
-  const onOpenModal = () =>
+  const onOpenModal = () => {
+    console.log("toto");
     openModal({ title: "Links", contentElement: <SocialLinksModal /> });
+  };
 
   return (
     <div className={styles.Header}>

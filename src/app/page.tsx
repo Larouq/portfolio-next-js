@@ -1,4 +1,3 @@
-"use client";
 import App from "./App";
 
 export default function Home({ children }: { children: React.ReactNode }) {
