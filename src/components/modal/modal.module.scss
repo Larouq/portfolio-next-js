@@ -31,6 +31,7 @@
     background-color: var(--elevated-base);
     padding: 24px;
     z-index: 1000001;
+    
 
     .modal-header {
         display: flex;
@@ -39,10 +40,13 @@
         border-bottom: 1px solid var(--error);
         width: 100%;
         padding-bottom: 10px;
+        .close-modal-icon {
+            cursor: pointer;
+        }
     }
 
     .modal-content {
-        margin-top: 12px;
+        margin-top: 32px;
     }
    
 }
