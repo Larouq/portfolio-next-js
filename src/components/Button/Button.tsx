@@ -28,7 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button className={buttonClassNames} onClick={onClick}>
       {icon}
-      {text}
+      <span>{text}</span>
     </button>
   );
 };
