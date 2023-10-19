@@ -23,12 +23,12 @@ export const Header: React.FC<HeaderProps> = () => {
     <div className={styles.Header}>
       <ProfilePicture />
       <Link href={"/about"}>
-        <p>About me</p>
+        <p className={styles.Header_link}>SSR</p>
       </Link>
       <Button
         variant={ButtonVariant.Secondary}
         onClick={onOpenModal}
-        text="Links"
+        text="See profiles"
         icon={<ShareNetwork size={24} weight="bold" />}
       />
     </div>

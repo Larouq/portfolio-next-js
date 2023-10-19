@@ -14,5 +14,11 @@ interface SocialLink {
     icon: React.ReactNode;
     link: string;
 }
+
+export interface MyResume {
+    name: string;
+    work: string;
+    experiences: string[];
+}
   
 export interface SocialLinks extends Array<SocialLink> {}

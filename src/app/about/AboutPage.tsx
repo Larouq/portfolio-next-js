@@ -21,7 +21,7 @@ export default async function AboutPage() {
   return (
     <div>
       <section>
-        <h1>About me</h1>
+        <h1>Users</h1>
         <div>
           {data.map((user: User) => (
             <p key={user.id}>{user.name}</p>
