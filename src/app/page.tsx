@@ -1,5 +1,5 @@
-import App from "./App";
+import { HomePage } from "@/pages/home";
 
-export default function Home({ children }: { children: React.ReactNode }) {
-  return <App>{children}</App>;
+export default function Home() {
+  return <HomePage />;
 }

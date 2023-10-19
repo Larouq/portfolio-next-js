@@ -16,8 +16,7 @@ export const Header: React.FC<HeaderProps> = () => {
   const { openModal } = useModal();
 
   const onOpenModal = () => {
-    console.log("toto");
-    openModal({ title: "Links", contentElement: <SocialLinksModal /> });
+    openModal({ title: "Profiles", contentElement: <SocialLinksModal /> });
   };
 
   return (

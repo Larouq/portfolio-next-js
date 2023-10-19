@@ -8,6 +8,8 @@ import { Modal } from "@/components/modal";
 
 import "./globals.scss";
 
+import styles from "./app.module.scss";
+
 export default function AppContainer({
   children,
 }: {
@@ -19,7 +21,9 @@ export default function AppContainer({
         <GlowingDots>
           <Header />
           <Modal />
-          {children}
+          <main className={styles.app_container}>
+            <div className="page-container">{children}</div>
+          </main>
         </GlowingDots>
       </ColorsProvider>
     </ModalProvider>
