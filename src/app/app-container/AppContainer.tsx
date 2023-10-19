@@ -7,7 +7,6 @@ import { GlowingDots } from "@/components/glowing-dots";
 import { Modal } from "@/components/modal";
 
 import "./app.module.scss";
-
 import styles from "./app.module.scss";
 
 export default function AppContainer({
