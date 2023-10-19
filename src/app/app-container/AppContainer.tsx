@@ -6,7 +6,7 @@ import { ModalProvider } from "@/contexts/modalContext";
 import { GlowingDots } from "@/components/glowing-dots";
 import { Modal } from "@/components/modal";
 
-import "./globals.scss";
+import "./app.module.scss";
 
 import styles from "./app.module.scss";
 
