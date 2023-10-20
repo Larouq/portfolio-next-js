@@ -1,9 +1,9 @@
 import { LinkedinLogo, GithubLogo } from "phosphor-react";
-import { SocialLinks } from "@/types/types";
+import { SocialLink } from "@/types/types";
 
 import styles from "./socialLinksModal.module.scss";
 
-const socialLinks: SocialLinks = [
+const socialLinks: SocialLink[] = [
   {
     id: "linkedin",
     label: "See my profile linkedin",
