@@ -14,9 +14,9 @@ interface ColorsContextType {
   onChangeColors: () => void;
 }
 
-interface ColorsProviderProps {
+type ColorsProviderProps = {
   children: ReactNode;
-}
+};
 
 const ColorsContext = createContext<ColorsContextType | undefined>(undefined);
 

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useColors } from "@/contexts/colorsContext";
 import pfp from "../../assets/jon_snow.png";

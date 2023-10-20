@@ -25,9 +25,9 @@ const initialState: ModalPropsType = {
   contentElement: null,
 };
 
-interface ModalProviderProps {
+type ModalProviderProps = {
   children: ReactNode;
-}
+};
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 

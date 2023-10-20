@@ -1,5 +1,3 @@
-"use client";
-
 import { myResume } from "@/utils/experiences";
 import { Fragment } from "react";
 import { ProfilePicture } from "@/components/profile-picture";
