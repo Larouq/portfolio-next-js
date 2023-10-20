@@ -44,19 +44,19 @@ export const Modal = () => {
     <>
       {ReactDOM.createPortal(
         <>
-          <div
+          <section
             className={styles["modal-blur-container"]}
             onClick={closeModal}
           />
           <div className={styles["modal-container"]}>
-            <div className={styles["modal-header"]}>
+            <header className={styles["modal-header"]}>
               <h2>{title}</h2>
               <X
                 size={24}
                 onClick={closeModal}
                 className={styles["close-modal-icon"]}
               />
-            </div>
+            </header>
             <div className={styles["modal-content"]}>{contentElement}</div>
           </div>
         </>,

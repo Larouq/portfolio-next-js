@@ -47,15 +47,15 @@ export const GlowingDots: React.FC<GlowingDotsProps> = ({ children }) => {
 
   return (
     <>
-      <div className={styles.glowing_dot_container}>
+      <section className={styles.glowing_dot_container}>
         {DOTS.map((_, i) => (
-          <div
+          <span
             key={i}
             className={styles.glowing_dot}
             style={clientSideStyles[i]}
           />
         ))}
-      </div>
+      </section>
       {children}
     </>
   );

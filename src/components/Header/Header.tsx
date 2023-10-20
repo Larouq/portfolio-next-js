@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = () => {
   };
 
   return (
-    <div className={styles.Header}>
+    <header className={styles.Header}>
       <ProfilePicture />
       <Link href={"/about"}>
         <p className={styles.Header_link}>SSR</p>
@@ -33,6 +33,6 @@ export const Header: React.FC<HeaderProps> = () => {
         text="See profiles"
         icon={<ShareNetwork size={24} weight="bold" />}
       />
-    </div>
+    </header>
   );
 };

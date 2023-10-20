@@ -2,10 +2,8 @@ import styles from "./roleCard.module.scss";
 
 export const RoleCard: React.FC = () => {
   return (
-    <div className={styles.role_container}>
-      <div>
-        <span className={styles.role_date}>2022 -- PRESENT</span>
-      </div>
+    <section className={styles.role_container}>
+      <span className={styles.role_date}>2022 -- PRESENT</span>
       <div>
         <h3>Front end developer • Tailor Nft </h3>
         <p className={styles.role_description}>
@@ -14,6 +12,6 @@ export const RoleCard: React.FC = () => {
           user authorization and full song playback.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
