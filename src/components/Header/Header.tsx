@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className={styles.Header}>
       <ProfilePicture />
-      <Link href={"/about"}>
+      <Link href={"/todo"}>
         <p className={styles.Header_link}>SSR</p>
       </Link>
       <Button
