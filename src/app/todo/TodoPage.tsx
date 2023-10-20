@@ -1,4 +1,5 @@
 import { prisma } from "../../../lib/prisma";
+import styles from "./todoPage.module.scss";
 
 type Todo = {
   id: number;
@@ -14,13 +15,15 @@ export default async function AboutPage() {
   const data: Todo[] = await getTodoList();
 
   return (
-    <section>
+    <section className={styles.todo_container}>
       <h1>Todo</h1>
       <div>
         {data.map((todo: Todo) => (
-          <p key={todo.id}>
-            {todo.id}&nbsp;{todo.name}
-          </p>
+          <ul key={todo.id}>
+            <li>
+              {todo.id}&nbsp;{todo.name}
+            </li>
+          </ul>
         ))}
       </div>
     </section>
