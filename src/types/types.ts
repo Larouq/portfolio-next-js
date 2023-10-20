@@ -13,5 +13,5 @@ export type SocialLink = {
 export type MyResume = {
     name: string;
     work: string;
-    experiences: string[];
+    resumeList: string[];
 }

@@ -6,7 +6,7 @@ import { RoleCard } from "@/components/role";
 import styles from "./home.module.scss";
 
 export default function Home() {
-  const { name, work, experiences } = myResume;
+  const { name, work, resumeList } = myResume;
 
   return (
     <section className={styles.profile_container}>
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.profile_section}>
-        {experiences.map((item, i) => (
+        {resumeList.map((item, i) => (
           <Fragment key={i}>
             <p className={styles.my_experience} key={i}>
               {item}

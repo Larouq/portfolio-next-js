@@ -22,3 +22,10 @@
     color: var(--faintgrey);
     margin-top: 12px;
 }
+
+.role_pills {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
