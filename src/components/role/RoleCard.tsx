@@ -17,8 +17,6 @@ export const RoleCard: React.FC<RoleCardProps> = ({ experience }) => {
         <h3>{title}</h3>
         <p className={styles.role_description}>{description}</p>
         <div className={styles.role_pills}>
-          <Pill text="Javascript" color="red" />
-          <Pill text="Javascript" color="red" />
           {skills.map((skill, i) => (
             <Pill text={skill.name} color={skill.color} key={i} />
           ))}

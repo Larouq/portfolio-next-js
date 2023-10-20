@@ -1,9 +1,11 @@
 import classNames from "classnames";
 import styles from "./pill.module.scss";
 
+type ColorPill = "red" | "blue" | "green" | "yellow";
+
 type PillProps = {
   text: string;
-  color: string;
+  color: ColorPill;
 };
 
 export const Pill: React.FC<PillProps> = ({ text, color }) => {
