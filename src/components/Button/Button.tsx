@@ -8,12 +8,12 @@ export enum ButtonVariant {
   Third = "third",
 }
 
-interface ButtonProps {
+type ButtonProps = {
   text: string;
   onClick: () => void;
   variant: ButtonVariant;
   icon: ReactNode;
-}
+};
 
 export const Button: React.FC<ButtonProps> = ({
   text,

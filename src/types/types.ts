@@ -10,8 +10,21 @@ export type SocialLink = {
     link: string;
 }
 
+type Skills = {
+    name: string;
+    color: string;
+}
+
+export type Experience = {
+    title: string;
+    description: string;
+    date: string;
+    skills: Skills[];
+}
+
 export type MyResume = {
     name: string;
     work: string;
     resumeList: string[];
+    experiences: Experience[];
 }

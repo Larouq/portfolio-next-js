@@ -10,9 +10,9 @@ import { SocialLinksModal } from "../social-links-modal/SocialLinksModal";
 import styles from "./header.module.scss";
 import Link from "next/link";
 
-interface HeaderProps {
+type HeaderProps = {
   title?: string;
-}
+};
 
 export const Header: React.FC<HeaderProps> = () => {
   const { openModal } = useModal();
