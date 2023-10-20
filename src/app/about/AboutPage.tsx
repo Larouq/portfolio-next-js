@@ -1,29 +1,26 @@
-type User = {
+import { prisma } from "../../../lib/prisma";
+
+type Todo = {
   id: number;
   name: string;
-  email: string;
 };
 
-async function getData() {
-  const data = await fetch("https://jsonplaceholder.typicode.com/users");
-  const users = await data.json();
-
-  return users.map((user: User) => ({
-    id: user.id,
-    name: user.name,
-    email: user.email,
-  }));
+async function getTodoList() {
+  const data = await prisma.todo.findMany();
+  return data;
 }
 
 export default async function AboutPage() {
-  const data: User[] = await getData();
+  const data: Todo[] = await getTodoList();
 
   return (
     <section>
-      <h1>Users</h1>
+      <h1>Todo</h1>
       <div>
-        {data.map((user: User) => (
-          <p key={user.id}>{user.name}</p>
+        {data.map((todo: Todo) => (
+          <p key={todo.id}>
+            {todo.id}&nbsp;{todo.name}
+          </p>
         ))}
       </div>
     </section>
