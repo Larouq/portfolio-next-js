@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode, useEffect, useMemo, useState } from "react";
 import { useColors } from "@/contexts/colorsContext";
 import { getRandomNumber } from "@/utils/randomGeneration";

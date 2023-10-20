@@ -1,3 +1,5 @@
+"use client";
+
 import { useModal } from "@/contexts/modalContext";
 import { ShareNetwork } from "phosphor-react";
 

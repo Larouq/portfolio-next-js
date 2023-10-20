@@ -1,3 +1,5 @@
+"use client";
+
 import type { ReactNode } from "react";
 import React, { createContext, useContext, useState } from "react";
 import { ColorsTypes } from "@/types/types";

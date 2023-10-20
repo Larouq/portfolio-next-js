@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useLayoutEffect, useMemo } from "react";
 import ReactDOM from "react-dom";
 import { useModal } from "@/contexts/modalContext";

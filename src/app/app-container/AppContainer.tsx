@@ -1,5 +1,3 @@
-"use client";
-
 import { Header } from "@/components/header";
 import { ColorsProvider } from "@/contexts/colorsContext";
 import { ModalProvider } from "@/contexts/modalContext";
