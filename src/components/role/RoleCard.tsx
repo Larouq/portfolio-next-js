@@ -12,7 +12,7 @@ export const RoleCard: React.FC<RoleCardProps> = ({ experience }) => {
 
   return (
     <section className={styles.role_container}>
-      <span className={styles.role_date}>{date}</span>
+      <div className={styles.role_date}>{date}</div>
       <section>
         <h3>{title}</h3>
         <p className={styles.role_description}>{description}</p>
