@@ -19,7 +19,7 @@ export default function AppContainer({
           <Header />
           <Modal />
           <main className={styles.app_container}>
-            <div className="page-container">{children}</div>
+            <main className="page-container">{children}</main>
           </main>
         </GlowingDots>
       </ColorsProvider>

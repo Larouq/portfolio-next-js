@@ -19,15 +19,13 @@ export default async function AboutPage() {
   const data: User[] = await getData();
 
   return (
-    <div>
-      <section>
-        <h1>Users</h1>
-        <div>
-          {data.map((user: User) => (
-            <p key={user.id}>{user.name}</p>
-          ))}
-        </div>
-      </section>
-    </div>
+    <section>
+      <h1>Users</h1>
+      <div>
+        {data.map((user: User) => (
+          <p key={user.id}>{user.name}</p>
+        ))}
+      </div>
+    </section>
   );
 }

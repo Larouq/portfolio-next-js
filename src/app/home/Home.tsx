@@ -9,7 +9,7 @@ export default function Home() {
   const { name, work, experiences } = myResume;
 
   return (
-    <div className={styles.profile_container}>
+    <section className={styles.profile_container}>
       <section className={styles.profile_section}>
         <div className={styles.me_container}>
           <h1>{name}</h1>
@@ -32,6 +32,6 @@ export default function Home() {
           <RoleCard />
         </div>
       </section>
-    </div>
+    </section>
   );
 }
