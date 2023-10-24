@@ -26,3 +26,8 @@
 .button-third {
     background-color: var(--warning);
 }
+
+.button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
