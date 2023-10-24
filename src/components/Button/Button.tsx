@@ -1,18 +1,16 @@
+"use client";
+
 import classNames from "classnames";
 import styles from "./button.module.scss";
 import { ReactNode } from "react";
 
-export enum ButtonVariant {
-  Primary = "primary",
-  Secondary = "secondary",
-  Third = "third",
-}
+type ButtonVariant = "primary" | "secondary" | "thrid";
 
 type ButtonProps = {
   text: string;
   onClick: () => void;
   variant: ButtonVariant;
-  icon: ReactNode;
+  icon?: ReactNode;
 };
 
 export const Button: React.FC<ButtonProps> = ({

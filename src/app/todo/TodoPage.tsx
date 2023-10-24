@@ -1,4 +1,6 @@
+import { TodoForm } from "@/components/form";
 import { prisma } from "../../../lib/prisma";
+
 import styles from "./todoPage.module.scss";
 
 type Todo = {
@@ -17,6 +19,7 @@ export default async function AboutPage() {
   return (
     <section className={styles.todo_container}>
       <h1>Todo</h1>
+      <TodoForm />
       <div>
         {data.map((todo: Todo) => (
           <ul key={todo.id}>

@@ -3,7 +3,7 @@
 import { useModal } from "@/contexts/modalContext";
 import { ShareNetwork } from "phosphor-react";
 
-import { Button, ButtonVariant } from "../button";
+import { Button } from "../button";
 import { ProfilePicture } from "../profile-picture/ProfilePicture";
 import { SocialLinksModal } from "../social-links-modal/SocialLinksModal";
 
@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = () => {
         <p className={styles.Header_link}>SSR</p>
       </Link>
       <Button
-        variant={ButtonVariant.Secondary}
+        variant="secondary"
         onClick={onOpenModal}
         text="See profiles"
         icon={<ShareNetwork size={24} weight="bold" />}
