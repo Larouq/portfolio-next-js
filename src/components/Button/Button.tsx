@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { experimental_useFormState as useFormStatus } from "react-dom";
+import { experimental_useFormStatus as useFormStatus } from "react-dom";
 import classNames from "classnames";
 
 import styles from "./button.module.scss";

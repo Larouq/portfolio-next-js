@@ -41,6 +41,7 @@ export const GlowingDots: React.FC<GlowingDotsProps> = ({ children }) => {
       opacity: `${getRandomNumber(20, 30)}%`,
       backgroundColor: selectedColor[getRandomNumber(0, 1)],
       boxShadow: `0 0 12px ${selectedColor[getRandomNumber(0, 1)]}`,
+      zIndex: -100,
     }));
     setClientSideStyles(dotStyles);
   }, [selectedColor]);
