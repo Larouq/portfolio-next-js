@@ -30,8 +30,6 @@ export const Button: React.FC<ButtonProps> = ({
     [styles["button-disabled"]]: disabled || pending,
   });
 
-  console.log("pending", pending);
-
   return (
     <button
       className={buttonClassNames}
