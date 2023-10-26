@@ -6,7 +6,7 @@ import classNames from "classnames";
 
 import styles from "./button.module.scss";
 
-type ButtonVariant = "primary" | "secondary" | "thrid";
+type ButtonVariant = "primary" | "secondary" | "third";
 
 type ButtonProps = {
   text: string;
